@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <svg>
+        <symbol id="icon-insta">
+
+
+        </symbol>
+
+
+    </svg>
+
+
+
+    <div class="cart">
+        <div class="content">
+            <div class="img">
+                <img src="https://pbs.twimg.com/profile_images/1235250851876352002/zXuZlI2k_400x400.jpg" alt="profil">
+            </div>
+            <h3 class="info">Ruslan Şerifov<i class="fas fa-pen-nib"></i></h3>
+            <h3 class="stars">
+                <i class="fas fa-star" id="star"></i>
+                <i class="fas fa-star" id="star"></i>
+                <i class="fas fa-star" id="star"></i>
+                <i class="fas fa-star" id="star"></i>
+                <i class="fas fa-star" id="star"></i>
+            </h3>
+            <h5 class="info">
+                <a href="Tel: +994 77 529 36 98"><i class="fas fa-phone-alt">
+                    </i>+994 77 529 36 98</a>
+            </h5>
+            <h5 class="info"><i class="fas fa-map-marker-alt">
+
+                </i>
+                Azərbaycan, Bakı
+            </h5>
+            <h5 class="info">
+                <i class="fas fa-book">
+                </i>
+                student
+            </h5>
+            <div class="info_cart">
+                <h5 class="info" id="cart_icons" name="Gmail" onmouseover="showIconName(this)"
+                    onmouseout="hideIconName(this)">
+                    <a href="mailto: ruslanserifov70@gmail.com">
+                        <div class="icon-info"></div>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </h5>
+                <h5 class="info" id="cart_icons" name="facebook" onmouseover="showIconName(this)"
+                    onmouseout="hideIconName(this)">
+                    <a href="https://www.facebook.com">
+                        <div class="icon-info"></div>
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <h5 class="info" id="cart_icons" name="Github" onmouseover="showIconName(this)"
+                        onmouseout="hideIconName(this)">
+                        <a href="https://github.com/dealoo">
+                            <div class="icon-info"></div>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </h5>
+                    <h5 class="info" id="cart_icons" name="serifov.927" onmouseover="showIconName(this)"
+                        onmouseout="hideIconName(this)">
+                        <a href="https://www.instagram.com/serifov.927">
+                            <div class="icon-info"></div>
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </h5>
+                    <h5 class="info" id="cart_icons" name="telegram" onmouseover="showIconName(this)"
+                        onmouseout="hideIconName(this)">
+                        <a href="https://www.reddit.com">
+                            <div class="icon-info"></div>
+                            <i class="fab fa-telegram"></i>
+
+                        </a>
+                    </h5>
+                    <h5 class="info" id="cart_icons" name="Web" onmouseover="showIconName(this)"
+                        onmouseout="hideIconName(this)">
+                        <a href="https://www.reddit.com">
+                            <div class="icon-info"></div>
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </h5>
+
+            </div>
+
+        </div>
+    </div>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .info a {
+            color: white;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        #cart_icons {
+            width: 30px;
+            margin: 0px 10px;
+            height: 30px;
+            display: flex;
+            font-size: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease-out;
+        }
+
+        #cart_icons:hover i {
+            transform: translateX(-20px) scale(1.5) rotateY(360deg);
+            filter: drop-shadow(0px 5px 2px black);
+            color: red;
+            cursor: pointer;
+        }
+
+        #cart_icons i {
+            transition: all 0.5s, width 3s;
+            margin-right: 10px;
+            z-index: 100;
+        }
+
+        .info_cart {
+            position: absolute;
+            bottom: 0px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            box-shadow: 0px 0px 10px 1px black;
+            height: 100px;
+            margin-top: 20px;
+            background-color: #3E3232;
+            padding: 20px 0px;
+        }
+
+        .info {
+            display: flex;
+            margin-left: -10px;
+            font-family: "Rubik Wet Paint", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: aqua;
+            transition: 0.2s;
+        }
+
+        .info i {
+            margin: 3px 5px 2px 0px;
+            font-size: 16px;
+        }
+
+        .info i:nth-of-type(1) {
+            margin-left: 5px;
+        }
+
+        .info:hover {
+            color: white;
+            transform: scale(1.02);
+        }
+
+        .info:hover .icon-info {
+            bottom: -70%;
+            font-size: 15px;
+            padding: 5px;
+            box-shadow: 5px 5px 10px 1px black;
+        }
+
+        .icon-info {
+            position: absolute;
+            bottom: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            font-size: 0px;
+            border-radius: 5px;
+            transition: 0.4S;
+        }
+
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(60deg, #503C3C, #3E3232);
+        }
+
+        .content {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            transition: 0.2s;
+            transform: scale(1.04);
+        }
+
+        .content:hover {
+            transform: scale(1);
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 10px 0px 0px 10px;
+            transition: 0.3s ease-out;
+        }
+
+        img {
+            border-radius: 50%;
+            border: 4px solid black;
+            transition: 0.2s linear;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s ease-out;
+
+        }
+
+        .img:hover img {
+            transform: scale(1.05) rotateY(360deg);
+            box-shadow: 0px 0px 10px 1px black;
+        }
+
+        .cart {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(69, 60, 60);
+            color: white;
+            width: 350px;
+            height: 500px;
+            padding: 4px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px 2px rgb(113, 94, 94);
+        }
+
+        .cart:hover {
+            background-color: rgb(69, 60, 60);
+            box-shadow: 0px 0px 20px 5px rgb(113, 94, 94);
+        }
+
+        .cart::before {
+            content: '';
+            position: absolute;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(180deg, #9def0f, #de141440);
+            box-shadow: 0px -30px 10px 2px #9def0f;
+            transform-origin: 100% 0;
+            z-index: -1;
+            top: 50%;
+            left: -50%;
+            justify-content: center;
+            animation: dovur 4s linear infinite;
+        }
+
+        .cart::after {
+            content: '';
+            position: absolute;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(0deg, #9def0f, #de141440);
+            box-shadow: 0px 30px 10px 2px #9def0f;
+            transform-origin: 0% 20%;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            justify-content: center;
+            animation: dovur 4s linear infinite;
+        }
+
+        @keyframes dovur {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {}
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: #7E6363;
+            border-radius: 10px;
+
+        }
+
+        .footer {
+            position: absolute;
+            display: flex;
+            bottom: 0px;
+            background-color: black;
+            width: 100%;
+            height: 120px;
+            color: aquamarine;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #star:nth-of-type(1),
+        #star:nth-of-type(2),
+        #star:nth-of-type(3),
+        #star:nth-of-type(4) {
+            color: gold;
+
+        }
+
+        #star {
+            transition: 0.2s;
+        }
+
+        #star:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <script>
+        function showIconName(element) {
+            const tooltip = element.querySelector('.icon-info');
+            const tooltipText = element.getAttribute('name');
+            tooltip.textContent = tooltipText;
+            tooltip.style.display = 'block';
+        }
+
+        function hideIconName(element) {
+            const tooltip = element.querySelector('.icon-info');
+
+        }
+
+    </script>
+</body>
+
+</html>
